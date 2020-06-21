@@ -1,8 +1,9 @@
 {
+	"icon": "https://s1.ax1x.com/2020/06/21/N1LayF.png",
 	"name": "fxml-viewer",
 	"displayName": "FXML Viewer",
 	"description": "A vscode extension view FXML file in SceneBuilder",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "lzw-723",
 	"author": "Zhiwei Li",
 	"license": "WTFPL",
@@ -25,8 +26,8 @@
 				"command": "extension.openFXML",
 				"title": "Open FXML",
 				"icon": {
-					"light": "./img/view.svg",
-					"dark": "./img/view.svg"
+					"light": "./img/view_light.svg",
+					"dark": "./img/view_dark.svg"
 				}
 			}
 		],
@@ -64,8 +65,7 @@
 				"scenebuilder.home": {
 					"type": "string",
 					"default": null,
-					"description": "Path to SceneBuilder",
-					"scope": "window"
+					"description": "Path to SceneBuilder"
 				}
 			}
 		}
@@ -76,6 +76,7 @@
 		"test": "node ./test/runTest.js"
 	},
 	"keywords": [
+		"java",
 		"JavaFx",
 		"fxml",
 		"ScenceBuilder"

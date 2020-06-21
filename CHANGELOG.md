@@ -1,7 +1,9 @@
 # Change Log
 
-All notable changes to the "fxml-viewer" extension will be documented in this file.
-
-## [Unreleased]
+## 1.0.0
 
 - Initial release
+
+## 1.0.1
+
+- add icons
