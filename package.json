@@ -1,5 +1,5 @@
 {
-	"icon": "https://s1.ax1x.com/2020/06/21/N1LayF.png",
+	"icon": "img/FXML-Viewer.png",
 	"name": "fxml-viewer",
 	"displayName": "FXML Viewer",
 	"description": "A vscode extension view FXML file in SceneBuilder",
@@ -17,13 +17,13 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.openFXML"
+		"onCommand:fxml-viewer.openFXML"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.openFXML",
+				"command": "fxml-viewer.openFXML",
 				"title": "Open FXML",
 				"icon": {
 					"light": "./img/view_light.svg",
@@ -34,26 +34,26 @@
 		"menus": {
 			"editor/title": [
 				{
-					"command": "extension.openFXML",
+					"command": "fxml-viewer.openFXML",
 					"when": "resourceExtname == .fxml",
 					"group": "navigation"
 				}
 			],
 			"commandPalette": [
 				{
-					"command": "extension.openFXML",
+					"command": "fxml-viewer.openFXML",
 					"when": "resourceExtname == .fxml"
 				}
 			],
 			"explorer/context": [
 				{
-					"command": "extension.openFXML",
+					"command": "fxml-viewer.openFXML",
 					"when": "resourceExtname == .fxml"
 				}
 			],
 			"editor/context": [
 				{
-					"command": "extension.openFXML",
+					"command": "fxml-viewer.openFXML",
 					"when": "resourceExtname == .fxml"
 				}
 			]
@@ -62,10 +62,15 @@
 			"type": "object",
 			"title": "FXML Viewer",
 			"properties": {
-				"scenebuilder.home": {
+				"fxml-viewer.SceneBuilder.executable": {
 					"type": "string",
 					"default": null,
-					"description": "Path to SceneBuilder"
+					"description": "SceneBuilder executable file path"
+				},
+				"fxml-viewer.autoFindPath": {
+					"type":"boolean",
+					"default":"true",
+					"description": "Whether to automatically search the executable file path of SceneBuilder(if you not set SceneBuilder executable file path)"
 				}
 			}
 		}
@@ -91,5 +96,8 @@
 		"mocha": "^7.0.1",
 		"typescript": "^3.7.5",
 		"vscode-test": "^1.3.0"
+	},
+	"dependencies": {
+		"regedit": "^3.0.3"
 	}
 }
