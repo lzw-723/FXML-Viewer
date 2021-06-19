@@ -1,18 +1,24 @@
+<!--
+ * @Author: lzw-723
+ * @Date: 2020-03-06 15:28:19
+ * @LastEditTime: 2021-06-19 20:15:49
+ * @LastEditors: lzw-723
+-->
 # FXML Viewer
 
 A vscode extension view FXML file in SceneBuilder
 
 ## Features
 
-Auto find the path of exe file
+developing
 
 ## Requirements
 
-You have to install ScenceBuilder
+You have to install SceneBuilder
 
 ## Extension Settings
 
-* `scencebuiler.home`: the path of SceneBuilder's exe file
+* `SceneBuilder.executable`: the path of SceneBuilder's executable file
 
 ## Release Notes
 

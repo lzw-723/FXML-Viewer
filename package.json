@@ -1,9 +1,9 @@
 {
-	"icon": "img/FXML-Viewer.png",
+	"icon": "img/icon.png",
 	"name": "fxml-viewer",
 	"displayName": "FXML Viewer",
 	"description": "A vscode extension view FXML file in SceneBuilder",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"publisher": "lzw-723",
 	"author": "Zhiwei Li",
 	"license": "WTFPL",
@@ -26,11 +26,15 @@
 				"command": "fxml-viewer.openFXML",
 				"title": "Open FXML",
 				"icon": {
-					"light": "./img/view_light.svg",
-					"dark": "./img/view_dark.svg"
+					"light": "./img/show_light.svg",
+					"dark": "./img/show_dark.svg"
 				}
 			}
 		],
+		"keybindings": {
+			"command": "fxml-viewer.openFXML",
+			"key": "ctrl+alt+f"
+		},
 		"menus": {
 			"editor/title": [
 				{
@@ -67,10 +71,15 @@
 					"default": null,
 					"description": "SceneBuilder executable file path"
 				},
-				"fxml-viewer.autoFindPath": {
-					"type":"boolean",
-					"default":"true",
-					"description": "Whether to automatically search the executable file path of SceneBuilder(if you not set SceneBuilder executable file path)"
+				"fxml-viewer.enableShortcutKeys": {
+					"type": "boolean",
+					"default": "false",
+					"description": "[Unavailable]Press Ctrl+Alt+F to display the fxml file)"
+				},
+				"fxml-viewer.enableAutoSave": {
+					"type": "boolean",
+					"default": "false",
+					"description": "[Unavailable]Save the fxml file before opening it in SceneBuilder)"
 				}
 			}
 		}
@@ -81,8 +90,8 @@
 		"test": "node ./test/runTest.js"
 	},
 	"keywords": [
-		"java",
-		"JavaFx",
+		"Java",
+		"JavaFX",
 		"fxml",
 		"ScenceBuilder"
 	],
